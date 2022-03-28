@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1><b>Belly Button Biodiversity Dashboard</b></h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>What's in Your Belly Button?</h2>
+        <p>Many bacterial species can be found within the human belly button. And each persons' collection of belly button bacteria is unique to them! Our goal is to find a bacteria that can synthesize proteins that taste similar to beef.</p>
+        <p>Could your belly button be the secret that unlocks this savroy success? Explore the dataset to find out more. Click on a test subject ID to find out more about their bacterial makeup, as well as how frequently they wash their navels.</p>
+        <p> </p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div id="gauge"></div>
+        <p><i>The guage measures how often the subject washed their belly button each week. Washing the navel leads to changes in bacterial makeup.</i></p>
+      </div>
+      <div class="col-md-6 text-center">
+        <div id="bar"></div>
+        <p><i>This graph shows the top ten most commonly found bacterial cultures in the subject's navel.</i></p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12 text-center" sytle="background-color: transparent;">
+        <div id="bubble"></div>
+        <p><i>This bubble chart shows the requency of all bacterial cultures in the subjects navel. The larger the circle, the more prevelent that species is.</i></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
